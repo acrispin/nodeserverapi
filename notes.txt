@@ -1,4 +1,5 @@
 Prueba de json-server 
+http://blog.meridadesign.com/crea-una-api-local-para-desarrollo-con-json-server/
 
 Creacion del proyecto
     $ mkdir app_name_api && cd app_name_api
@@ -32,3 +33,24 @@ Probar las apis
     $ curl -X PUT -H "Content-Type: application/json" -d '{"name":"Test name 01","code":"2222222", "phone":"012345"}' http://localhost:3000/clients/8
     $ curl -X DELETE  http://localhost:3000/clients/6
 
+Crear con datos aleatorios con faker
+    $ npm install lodash faker --save-dev
+
+Crear el file db.js con el siguiente contenido:
+module.exports = function () {
+    var faker = require("faker"),
+        _ = require("lodash");
+         
+    return {
+        clients: _.times(100, function(n) {
+            return {
+                id: n,
+                name: faker.name.findName(),
+                avatar: faker.internet.avatar()
+            }
+        })
+    }
+}
+
+levantar de nuevo el server
+    $ sudo json-server db.js
