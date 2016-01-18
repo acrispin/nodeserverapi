@@ -1,0 +1,34 @@
+Prueba de json-server 
+
+Creacion del proyecto
+    $ mkdir app_name_api && cd app_name_api
+    $ npm init -y
+
+Instalacion
+    $ sudo npm install -g json-server --save-dev
+
+Creacion del file db
+    $ mkdir db.json
+
+Editar db.json con el siguiente contenido
+{
+    "clients": []
+}
+
+levantar el servicio
+    $ sudo json-server --watch db.json
+
+Probar las apis
+    GET    /clients
+    GET    /clients/:id
+    POST   /clients
+    PUT    /clients/:id
+    DELETE /clients/:id
+
+    $ curl http://localhost:3000/clients
+    $ curl http://localhost:3000/clients/1
+    $ curl -X POST -d 'name=Test Name&code=23994873' http://localhost:3000/clients
+    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"Test name 01","code":"11111111"}' http://localhost:3000/clients
+    $ curl -X PUT -H "Content-Type: application/json" -d '{"name":"Test name 01","code":"2222222", "phone":"012345"}' http://localhost:3000/clients/8
+    $ curl -X DELETE  http://localhost:3000/clients/6
+

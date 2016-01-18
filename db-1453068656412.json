@@ -1,0 +1,22 @@
+{
+  "clients": [
+    {
+      "nom": "Anton crispin",
+      "code": "A3980",
+      "phone": "091928737",
+      "id": 1
+    },
+    {
+      "nom": "Alonso crispin",
+      "code": "A3980",
+      "phone": "091928737",
+      "id": 3
+    },
+    {
+      "nom": "Anton crispin",
+      "code": "A3980",
+      "phone": "091928737",
+      "id": 4
+    }
+  ]
+}
