@@ -1,5 +1,6 @@
 Prueba de json-server 
 http://blog.meridadesign.com/crea-una-api-local-para-desarrollo-con-json-server/
+https://www.npmjs.com/package/json-server
 
 Creacion del proyecto
     $ mkdir app_name_api && cd app_name_api
